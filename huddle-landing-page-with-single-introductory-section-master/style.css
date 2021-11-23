@@ -1,0 +1,257 @@
+/* ##############################################
+ # GENERALE STYLING
+ ################################################*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #333;
+}
+
+/* ##############################################
+ # Main STYLING
+ ################################################*/
+.header {
+  /* 1440px */
+  max-width: 144rem;
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(/images/bg-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header-hero {
+  padding: 0 4.4rem;
+
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  row-gap: 4.4rem;
+}
+
+.nav {
+  padding: 0 4rem;
+}
+
+.nav-logo {
+  width: 12.8rem;
+  height: 12.8rem;
+}
+
+.main-img {
+  width: 100%;
+}
+
+.header-hero-content {
+  padding: 0 9.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 6rem;
+}
+
+.main-heading {
+  width: 80%;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.main-text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: #d8d8d8;
+}
+
+.main-link:link,
+.main-link:visited {
+  align-self: flex-start;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  background-color: #eee;
+  border-radius: 100px;
+  box-shadow: 0 1.6rem 3.2rem rgba(0, 0, 0, 0.3);
+  padding: 1.4rem 6.4rem;
+  color: hsl(257, 40%, 49%);
+  transition: all 0.4s;
+}
+
+.main-link:hover,
+.main-link:active {
+  background-color: hsl(300, 69%, 71%);
+  color: #fff;
+}
+
+.header-hero-link {
+  grid-column: 2;
+  justify-self: end;
+
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social-link {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.6rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.social-link:hover {
+  color: hsl(300, 69%, 71%);
+  border: 1px solid hsl(300, 69%, 71%);
+}
+
+.footer {
+  background-color: hsl(257, 40%, 49%);
+}
+
+.attribution {
+  font-size: 1rem;
+  color: #eee;
+  margin-left: 2.4rem;
+  letter-spacing: 1px;
+}
+
+.link:link,
+.link:visited {
+  text-decoration: none;
+  display: inline-block;
+  color: #d395d3;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+/* ##############################################
+ # MEDIA QURIES 
+ ################################################*/
+
+/* ###################
+            # below 1200px (Laptop) 
+    ###################
+ */
+@media (max-width: 75em) {
+  .header-hero {
+    grid-template-columns: 500px 1fr;
+    column-gap: 3.2rem;
+  }
+
+  .header-hero-content {
+    padding: 0 3.2rem;
+  }
+
+  .main-heading {
+    width: 100%;
+  }
+}
+
+/* ###################
+            # below 1000px (LandScape tablet) 
+    ###################
+ */
+@media (max-width: 62.5em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .header-hero {
+    column-gap: 2.4rem;
+    padding: 0 3.2rem;
+    grid-template-columns: 400px 1fr;
+  }
+
+  .header-hero-img {
+    align-self: center;
+  }
+}
+
+/* ###################
+            # below 800px (tablet) 
+    ###################
+ */
+@media (max-width: 50em) {
+  .header-hero {
+    padding: 0 2.4rem;
+    grid-template-columns: 350px 1fr;
+  }
+
+  .header-hero-img {
+    align-self: center;
+  }
+
+  .header-hero-content {
+    padding: 0 1.6rem;
+  }
+
+  .main-heading {
+    font-size: 2.4rem;
+  }
+}
+
+/* ###################
+            # below 600px (Phones) 
+    ###################
+ */
+@media (max-width: 37.5em) {
+  .header {
+    background-image: url(/images/bg-mobile.svg);
+  }
+
+  .header-hero {
+    padding: 0 4.4rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    align-items: center;
+  }
+
+  .header-hero-img {
+    width: 80%;
+  }
+
+  .header-hero-content {
+    padding: 0 6.4rem;
+    text-align: center;
+    gap: 3.2rem;
+  }
+
+  .main-link:link,
+  .main-link:visited {
+    align-self: center;
+  }
+}
+
+/* ###################
+            # below 375px (small Phones) 
+    ###################
+ */
+@media (max-width: 25em) {
+  .header-hero {
+    padding: 0 2.4rem;
+  }
+
+  .header-hero-img {
+    width: 100%;
+  }
+
+  .header-hero-content {
+    padding: 0 1.8rem;
+  }
+}
